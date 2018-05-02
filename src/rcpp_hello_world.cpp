@@ -4,7 +4,8 @@
 using namespace Rcpp;
 
 // [[Rcpp::export]]
-Rcpp::NumericMatrix cudaTest()
+List cudaTest()
 {
   testMalloc();
+  return List::create(Named("SomeReturnValue") = 0);
 }
